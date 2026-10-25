@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informasi Peminjaman Barang di TU UNESA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar" id="navbar">
+    <a class="brand" href="#beranda"><img src="assets/img-076.jpg" alt="Logo UNESA"><span>UNESA</span></a>
+    <nav><a href="#beranda">Beranda</a><a href="#barang">Daftar Barang</a><a href="#form">Form peminjaman</a><a href="#status">Cek Status</a></nav>
+  </header>
+  <main>
+    <section id="beranda" class="hero">
+      <div class="hero-copy"><h1>Informasi Peminjaman<br>Barang di TU UNESA</h1><p>Layanan peminjaman barang untuk mendukung<br class="desktop"> kegiatan akademik dan administrasi di lingkungan<br class="desktop"> Universitas Negeri Surabaya</p><a class="btn hero-btn" href="#form">Ajukan Peminjaman</a></div>
+      <div class="hero-circle"><img class="hero-laptop" src="assets/img-032.jpg" alt="Laptop"><img class="hero-projector" src="assets/img-034.jpg" alt="Proyektor"><img class="hero-mic" src="assets/img-030.jpg" alt="Mikrofon"></div>
+    </section>
+    <section id="barang" class="inventory page-section">
+      <h2>Daftar Barang</h2><label class="searchbox"><input id="search" type="search" placeholder="Cari barang..."><span class="search-icon"></span></label>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+    <section id="form" class="form-section page-section">
+      <h2 class="form-title">Formulir Peminjaman Barang</h2>
+      <form id="loanForm">
+        <div class="form-grid">
+          <div class="field"><label for="nama">Nama lengkap</label><input id="nama" required placeholder="Masukkan nama lengkap"></div>
+          <div class="field"><label for="barangDipinjam">Barang yang dipinjam</label><select id="barangDipinjam" required><option value="">Pilih barang</option></select></div>
+          <div class="field"><label for="nim">NIM</label><input id="nim" required placeholder="Masukkan NIM"></div>
+          <div class="field"><label for="tanggalPinjam">Tanggal Peminjaman</label><input id="tanggalPinjam" type="date" required></div>
+          <div class="field"><label for="prodi">Program Studi</label><select id="prodi" required><option value="">Pilih program studi</option><option>Sistem Informasi</option><option>Informatika</option><option>Manajemen Informatika</option><option>Pendidikan Teknologi Informasi</option></select></div>
+          <div class="field"><label for="tanggalKembali">Tanggal Pengembalian</label><input id="tanggalKembali" type="date" required></div>
+          <div class="field full"><label for="keperluan">Keperluan</label><textarea id="keperluan" required placeholder="Tuliskan keperluan peminjaman"></textarea></div>
+        </div>
+        <button class="btn submit-btn" type="submit">Kirim Permohonan</button>
+      </form>
+    </section>
+    <section id="status" class="status-section page-section">
+      <h2>Cek Status Peminjaman</h2>
+      <form id="statusForm" class="status-search"><input id="nomorPermohonan" placeholder="Masukkan nomor permohonan" aria-label="Nomor permohonan"><button class="btn" type="submit">Cari</button></form>
+      <div id="statusResult" class="status-result"><p>Hasil pencarian akan ditampilkan disini</p><small>Masukkan nomor permohonan terlebih dahulu</small></div>
+    </section>
+    <section id="success" class="success-section page-section" hidden><div class="success-card"><h2>Permohonan Berhasil Dikirim</h2><p>Nomor Permohonan Anda</p><strong id="successNumber">PB-2026-001</strong><p>Terima kasih, Permohonan barang anda telah berhasil dikirim</p><a class="btn" href="#beranda">Kembali ke Beranda</a></div></section>
+  </main>
+  <script src="script.js"></script>
+</body></html>
